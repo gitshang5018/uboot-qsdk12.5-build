@@ -13,6 +13,7 @@
  */
 
 /dts-v1/;
+#include <dt-bindings/gpio/gpio.h>
 #include "ipq40xx-dk04.dtsi"
 #include "nand_gpio.dtsi"
 
