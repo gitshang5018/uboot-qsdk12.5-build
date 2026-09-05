@@ -25,6 +25,9 @@ DECLARE_GLOBAL_DATA_PTR;
 extern unsigned int qpic_training_offset;
 #endif
 
+void fdt_fixup_set_qca_cold_reboot_enable(void *blob);
+void fdt_fixup_for_atf(void *blob);
+
 #ifdef CONFIG_IPQ_FDT_FIXUP
 #define FDT_EDIT "fdtedit"
 /* Buffer size to hold numbers from 0-99 + 1 NULL character */
@@ -866,15 +869,6 @@ __weak void fdt_fixup_set_qce_fixed_key(void *blob)
 	return;
 }
 
-__weak void fdt_fixup_set_qca_cold_reboot_enable(void *blob)
-{
-	return;
-}
-
-__weak void fdt_fixup_for_atf(void *blob)
-{
-	return;
-}
 
 #ifdef CONFIG_IPQ_BT_SUPPORT
 __weak void fdt_fixup_bt_running(void *blob)
@@ -957,6 +951,16 @@ __weak void fdt_fixup_auto_restart(void *blob)
 	return;
 }
 #endif
+
+__weak void fdt_fixup_set_qca_cold_reboot_enable(void *blob)
+{
+	return;
+}
+
+__weak void fdt_fixup_for_atf(void *blob)
+{
+	return;
+}
 
 __weak void fdt_fixup_art_format(void *blob)
 {

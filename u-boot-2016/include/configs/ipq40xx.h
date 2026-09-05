@@ -309,6 +309,7 @@ typedef struct {
 #endif
 
 #define CONFIG_FDT_FIXUP_PARTITIONS
+#define CONFIG_IPQ_FDT_FIXUP
 #define CONFIG_BOOTCOMMAND "bootipq"
 
 #define CONFIG_BOOTDELAY	2
