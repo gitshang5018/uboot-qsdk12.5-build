@@ -24,4 +24,11 @@ config PCI_IPQ
 config BOARD_TYPES
 	bool "Support board_type member in global data"
 	default y
+
+config TARGET_IPQ40XX_P2W_R619AC_128M
+	bool "P&W R619AC (128M NAND) board support"
+	default n
+	help
+	  Enable support for P&W R619AC (128M NAND) board
+
 endif

@@ -247,7 +247,25 @@ typedef struct {
 
 #define CONFIG_ENV_OVERWRITE
 #define CONFIG_CMD_PING
+
+#define CONFIG_HTTPD
+#define CONFIG_TCP
+#define CONFIG_LIB_RAND
+#define CONFIG_HTTPD_DEBUG
+#define CONFIG_LIB_IPQ_API
+#define CONFIG_LIB_FLASHRW
+#define CONFIG_NET_ABORT
+
+#define CONFIG_DHCPD
+#if defined(CONFIG_DHCPD)
+#define CONFIG_CMD_DISABLE_BOOTP
+#else
 #define CONFIG_CMD_DHCP
+#endif
+
+#define CONFIG_TELNETD
+#define CONFIG_WGET
+
 #define CONFIG_IPQ40XX_ESS	1
 #define CONFIG_IPQ40XX_EDMA     1
 #define CONFIG_NET_RETRY_COUNT          5
@@ -257,7 +275,9 @@ typedef struct {
 #define CONFIG_QCA8033_PHY      1
 #define CONFIG_MII
 #define CONFIG_CMD_MII
-#define CONFIG_IPADDR   192.168.1.11
+#define CONFIG_IPADDR   192.168.1.1
+#define CONFIG_NETMASK  255.255.255.0
+#define CONFIG_SERVERIP 192.168.1.2
 #define CONFIG_IPQ_NO_MACS      2
 
 #define CONFIG_MTD_DEVICE

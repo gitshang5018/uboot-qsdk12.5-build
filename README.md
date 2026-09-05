@@ -36,6 +36,7 @@
 
 | 平台    | 设备                        | 型号              | 备注                         |
 | :------ | :-------------------------- | :---------------- | :--------------------------- |
+| IPQ40xx | P&W R619AC (128M NAND)      | p2w_r619ac-128m   | 竞斗云 2.0                   |
 | IPQ50xx | CMCC MR3000D-CI             | cmcc_mr3000d-ci   |                              |
 | IPQ50xx | CMCC PZ-L8                  | cmcc_pz-l8        |                              |
 | IPQ50xx | CMCC RAX3000Q(Y)            | cmcc_rax3000q     | LAN3 口（靠近 Reset 键）不通 |

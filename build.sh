@@ -2,7 +2,7 @@
 
 # ============================================
 # IPQ 平台 U-Boot 构建脚本
-# 支持平台: ipq50xx, ipq53xx, ipq60xx, ipq807x, ipq95xx
+# 支持平台: ipq40xx, ipq50xx, ipq53xx, ipq60xx, ipq807x, ipq95xx
 # ============================================
 
 # 检查是否在 GitHub Actions 环境中运行
@@ -33,6 +33,7 @@ declare -A PLATFORM_CONFIG
 declare -A PLATFORM_CONFIG_ELFBIN_VERSION
 
 # 平台配置: [平台名]="MBN版本"
+PLATFORM_CONFIG["ipq40xx"]="3"
 PLATFORM_CONFIG["ipq50xx"]="3"
 PLATFORM_CONFIG["ipq53xx"]="6"
 PLATFORM_CONFIG["ipq60xx"]="6"
@@ -64,6 +65,7 @@ get_platform_config() {
 # 设备配置:
 # 格式: "平台:设备名:配置名:友好名"
 DEVICE_LIST=(
+    "ipq40xx:p2w_r619ac-128m:ipq4019_p2w_r619ac_128m:P&W R619AC (128M NAND)"
     "ipq50xx:cmcc_mr3000d-ci:ipq5018_cmcc_mr3000d_ci:CMCC MR3000D-CI"
     "ipq50xx:cmcc_pz-l8:ipq5018_cmcc_pz_l8:CMCC PZ-L8"
     "ipq50xx:cmcc_rax3000q:ipq5018_cmcc_rax3000q:CMCC RAX3000Q(Y)"
@@ -723,6 +725,9 @@ get_target_file_size() {
     # TODO: 根据不同设备设置目标大小（从 DEVICE_LIST 中获取目标大小）
     # 目前暂时统一使用 640 KiB
     case "$device_name" in
+        p2w_r619ac-128m)
+            target_size=524288
+            ;;
         *)
             target_size=655360
             ;;
@@ -1346,7 +1351,7 @@ show_help() {
     echo "  <设备名>                编译指定的单个设备"
     echo ""
     echo "支持的平台:"
-    echo "  ipq50xx, ipq53xx, ipq60xx, ipq807x"
+    echo "  ipq40xx, ipq50xx, ipq53xx, ipq60xx, ipq807x"
     echo ""
 
     print_device_list

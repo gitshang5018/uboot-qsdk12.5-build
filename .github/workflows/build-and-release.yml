@@ -12,6 +12,7 @@ on:
         type: choice
         options:
           - all
+          - ipq40xx
           - ipq50xx
           - ipq53xx
           - ipq60xx
@@ -35,6 +36,7 @@ on:
           - link_nn6000
           - oceanblue_s200-h
           - oppo_ckb01
+          - p2w_r619ac-128m
           - philips_ly1800
           - qihoo_360v6
           - redmi_ax5
