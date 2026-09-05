@@ -48,18 +48,18 @@ dtb-$(CONFIG_ARCH_IPQ806x) += ipq806x-ap148.dtb \
 	ipq806x-ap145_1xx.dtb \
 	ipq806x-ak01.dtb
 
-dtb-$(CONFIG_ARCH_IPQ40xx) += ipq40xx-dk01-c1.dtb \
-		ipq40xx-dk01-c2.dtb \
-		ipq40xx-dk04-c1.dtb \
-		ipq40xx-dk04-c2.dtb \
-		ipq40xx-dk04-c3.dtb \
-		ipq40xx-dk04-c4.dtb \
-		ipq40xx-dk07-c1.dtb \
-		ipq40xx-dk07-c2.dtb \
-		ipq40xx-dk07-c3.dtb \
-		ipq40xx-dk07-c4.dtb \
-		ipq40xx-dk01-s1.dtb \
-		ipq40xx-dk06-c1.dtb
+# dtb-$(CONFIG_ARCH_IPQ40xx) += ipq40xx-dk01-c1.dtb \
+# 		ipq40xx-dk01-c2.dtb \
+# 		ipq40xx-dk04-c1.dtb \
+# 		ipq40xx-dk04-c2.dtb \
+# 		ipq40xx-dk04-c3.dtb \
+# 		ipq40xx-dk04-c4.dtb \
+# 		ipq40xx-dk07-c1.dtb \
+# 		ipq40xx-dk07-c2.dtb \
+# 		ipq40xx-dk07-c3.dtb \
+# 		ipq40xx-dk07-c4.dtb \
+# 		ipq40xx-dk01-s1.dtb \
+# 		ipq40xx-dk06-c1.dtb
 
 # ifneq ($(CONFIG_IPQ_TINY),y)
 # dtb-$(CONFIG_ARCH_IPQ5018) += ipq5018-emulation.dtb \
